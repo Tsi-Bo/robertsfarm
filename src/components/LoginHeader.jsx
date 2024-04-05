@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
+import Login from "./Login";
+import Cart from "./Cart";
 
 const StyledLoginHeader = styled.div`
   display: flex;
@@ -11,10 +13,24 @@ const StyledLoginHeader = styled.div`
 `;
 
 function LoginHeader() {
+  const [showLogin, setShowLogin] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+
+  function toggleLogin() {
+    setShowLogin(!showLogin);
+  }
+
+  function toggleCart() {
+    setShowCart(!showCart);
+  }
+
   return (
     <StyledLoginHeader>
-      <Link to="/login">Login</Link>
-      <div>Cart</div>
+      <button onClick={toggleLogin}>Login</button>
+      {showLogin ? <Login toggleLogin={toggleLogin} /> : ""}
+
+      <button onClick={toggleCart}>Cart</button>
+      {showCart ? <Cart toggleCart={toggleCart} /> : ""}
     </StyledLoginHeader>
   );
 }

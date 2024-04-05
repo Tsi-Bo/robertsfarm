@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const StyledGallery = styled.div`
@@ -28,20 +29,29 @@ const GalleryItem = styled.div`
 `;
 
 function Gallery() {
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    const importAll = (r) => {
+      return r.keys().map(r);
+    };
+    // Importing images dynamically using require.context
+    const imagesArray = importAll(
+      require.context("./gallery", false, /\.(png|jpe?g|svg)$/)
+    );
+
+    setImages(imagesArray);
+  }, []);
+
   return (
     <StyledGallery>
-      <h1>Follow us on social media</h1>
       <StyledGalleryContainer>
-        <GalleryItem>Hello</GalleryItem>
-        <GalleryItem>Hello</GalleryItem>
-        <GalleryItem>Hello</GalleryItem>
-        <GalleryItem>Hello</GalleryItem>
-        <GalleryItem>Hello</GalleryItem>
-        <GalleryItem>Hello</GalleryItem>
-        <GalleryItem>Hello</GalleryItem>
-        <GalleryItem>Hello</GalleryItem>
+        {images.map((image, index) => (
+          <GalleryItem key={index}>
+            <img src={image} alt={`img-${index}`} />
+          </GalleryItem>
+        ))}
       </StyledGalleryContainer>
-      <p>...</p>
     </StyledGallery>
   );
 }

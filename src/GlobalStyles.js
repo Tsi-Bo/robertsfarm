@@ -4,6 +4,12 @@ const GlobalStyles = createGlobalStyle`
 
 :root {
 
+--night: #161412ff;
+--ivory: #fafdedff;
+--yellow: #f6df79ff;
+--dark-green: #29590dff;
+
+
   /* PADDING / MARGIN */
   --gap-xs: 10px;
   --gap-s: 20px;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "./Button";
+import Button from "./Button";
 import { Link } from "react-router-dom";
 
 const StyledMeetTheFamily = styled.div`

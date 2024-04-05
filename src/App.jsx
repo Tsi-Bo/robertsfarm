@@ -7,7 +7,6 @@ import Contact from "./pages/Contact";
 import AppLayout from "./components/AppLayout";
 import Products from "./pages/Products";
 import Faq from "./pages/Faq";
-import Login from "./pages/Login";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "./Button";
+import Button from "./Button";
 
 const StyledHero = styled.div`
   background-image: url("your-background-image.jpg");
