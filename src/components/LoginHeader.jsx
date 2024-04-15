@@ -12,6 +12,20 @@ const StyledLoginHeader = styled.div`
   font-size: var(--fs-s);
 `;
 
+const StyledButton = styled.button`
+  color: var(--night);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--night);
+  font-size: var(--fs-s);
+  padding: 0 var(--pad-s);
+  transition: all 0.2s;
+
+  &:hover {
+    padding: 0 var(--pad-xl);
+  }
+`;
+
 function LoginHeader() {
   const [showLogin, setShowLogin] = useState(false);
   const [showCart, setShowCart] = useState(false);
@@ -26,10 +40,10 @@ function LoginHeader() {
 
   return (
     <StyledLoginHeader>
-      <button onClick={toggleLogin}>Login</button>
+      <StyledButton onClick={toggleLogin}>Login</StyledButton>
       {showLogin ? <Login toggleLogin={toggleLogin} /> : ""}
 
-      <button onClick={toggleCart}>Cart</button>
+      <StyledButton onClick={toggleCart}>Cart</StyledButton>
       {showCart ? <Cart toggleCart={toggleCart} /> : ""}
     </StyledLoginHeader>
   );

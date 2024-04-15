@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Button from "./Button";
+import heroBackground from "../gallery/image4-min.jpeg";
 
 const StyledHero = styled.div`
-  background-image: url("your-background-image.jpg");
+  background-image: url(${heroBackground});
+
   background-size: cover;
   background-position: center;
   height: 100vh; /* Adjust as needed */
@@ -11,11 +13,11 @@ const StyledHero = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: var(--ivory);
 
   margin-bottom: var(--gap-l);
   margin-bottom: var(--gap-s);
-  margin-top: var(--gap-s);
+  margin-top: 0;
 
   p {
     font-size: var(--fs-m);
@@ -24,14 +26,10 @@ const StyledHero = styled.div`
 
   hr {
     width: 50%;
-    border: 1px solid white;
+    border: 1px solid var(--ivory);
     margin: 0;
     padding: 0;
   }
-`;
-
-const StyledButton = styled(Button)`
-  margin-top: var(--gap-l);
 `;
 
 function Hero() {
@@ -42,7 +40,7 @@ function Hero() {
       <h1>{` ROBERT'S FARM`}</h1>
       <hr />
       <p>CERTIFIED ORGANIC / LOCALLY GROWN / HANDPICKED</p>
-      <StyledButton>HELLO</StyledButton>
+      <Button>HELLO</Button>
     </StyledHero>
   );
 }

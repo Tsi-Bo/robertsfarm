@@ -3,9 +3,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const StyledAppLayout = styled.div`
-  background-color: lightblue;
-`;
+const StyledAppLayout = styled.div``;
 
 function AppLayout() {
   return (

@@ -7,7 +7,7 @@ const StyledContainer = styled.div`
   margin: 0 auto;
   overflow: auto;
   width: 85%;
-  background-color: lightgrey;
+  background-color: var(--yellow);
 `;
 
 // eslint-disable-next-line react/prop-types

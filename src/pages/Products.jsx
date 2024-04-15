@@ -1,5 +1,11 @@
+import Product from "../components/Product";
+
 function Products() {
-  return <div>Products</div>;
+  return (
+    <>
+      <Product />
+    </>
+  );
 }
 
 export default Products;

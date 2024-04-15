@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Logo from "./Logo";
 import LoginHeader from "./LoginHeader";
+import logo from "../gallery/logo.png";
 
 const StyledHeader = styled.header`
   height: var(--gap-m);
@@ -9,13 +9,13 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightcyan;
+  background-color: var(--ivory);
+  color: var(--night);
 
   a {
     transition: all 0.3s;
 
     &:hover {
-      color: red;
       letter-spacing: 0.4rem;
     }
   }
@@ -29,11 +29,22 @@ const StyledHeader = styled.header`
   }
 `;
 
+const StyledLogo = styled.img`
+  height: 100px;
+  width: 100px;
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(0.95);
+  }
+`;
+
 function Header() {
   return (
     <>
       <StyledHeader>
-        <Logo>logo</Logo>
+        <Link to="./home">
+          <StyledLogo src={logo} />
+        </Link>
         <ul>
           <li>
             <Link to="/about">About</Link>

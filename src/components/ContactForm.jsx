@@ -1,12 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Button from "./Button";
 
 const StyledContactForm = styled.div`
-  background-color: lightgreen;
+  padding: var(--gap-l);
 
-  margin: 0 auto;
   width: 100%;
+
   h2,
   button {
     text-align: center;
@@ -14,7 +13,28 @@ const StyledContactForm = styled.div`
   }
 `;
 
-const StyledButton = styled(Button)``;
+const StyledForm = styled.form`
+  width: 100%;
+`;
+
+const StyledButton = styled.button`
+  background-color: var(--yellow);
+  color: var(--night);
+  border: 2px solid var(--yellow);
+  padding: var(--pad-l) var(--pad-xl);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: var(--fs-m);
+  outline: none;
+  transition: all 0.2s;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.5;
+    transform: translateY(-5px);
+  }
+  margin-top: var(--gap-l);
+`;
 
 const StyledFormGroup = styled.div`
   margin-bottom: 20px;
@@ -79,7 +99,7 @@ function ContactForm() {
   return (
     <StyledContactForm>
       <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
+      <StyledForm onSubmit={handleSubmit}>
         <StyledFormGroup>
           <label htmlFor="firstName">First Name *</label>
           <input
@@ -132,7 +152,7 @@ function ContactForm() {
           ></textarea>
         </StyledFormGroup>
         <StyledButton type="submit">Submit</StyledButton>
-      </form>
+      </StyledForm>
     </StyledContactForm>
   );
 }

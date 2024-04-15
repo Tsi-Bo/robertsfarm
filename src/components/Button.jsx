@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  background-color: ${(props) =>
-    props.variant === "contained" ? `var(--yellow)` : "white"};
-  border: ${(props) =>
-    props.variant === "outlined" ? `1px solid ${props.color}` : "none"};
-  color: ${(props) => (props.variant === "outlined" ? props.color : "white")};
+  background-color: transparent;
+  color: var(--ivory);
+  border: 2px solid var(--ivory);
   padding: var(--pad-l) var(--pad-xl);
   cursor: pointer;
   border-radius: 5px;
   font-size: var(--fs-m);
   outline: none;
-  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+  transition: all 0.2s;
 
   &:hover {
-    opacity: ${(props) => (props.disabled ? 0.5 : 0.8)};
+    background-color: var(--ivory);
+    color: var(--night);
   }
+  margin-top: var(--gap-l);
 `;
 
 Button.defaultProps = {

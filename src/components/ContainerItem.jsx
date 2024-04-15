@@ -3,7 +3,6 @@ import styled from "styled-components";
 const StyledContainerItem = styled.div`
   flex: 1;
 
-  background-color: lightcyan;
   padding: var(--gap-l) var(--gap-l);
 
   display: flex;

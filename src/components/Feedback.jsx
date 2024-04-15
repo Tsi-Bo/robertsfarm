@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import styled from "styled-components";
+import logo from "../gallery/logo.png";
 
 const StyledFeedback = styled.div`
   width: 60%;
@@ -14,23 +15,30 @@ const StyledFeedback = styled.div`
 `;
 
 const StyledButton = styled.button`
+  background-color: var(--yellow);
   font-size: var(--fs-s);
   border: none;
   border-radius: 5px;
   padding: var(--gap-xs);
   margin: var(--gap-s);
+  opacity: 1;
   transition: all 0.2s;
 
   &:disabled {
-    background-color: #ccc; /* Change background color */
-    color: #666; /* Change text color */
+    opacity: 0.5;
+    color: var(--night); /* Change text color */
     cursor: not-allowed; /* Change cursor */
   }
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--night);
+    color: var(--ivory);
   }
+`;
+
+const StyledLogo = styled.img`
+  width: 200px;
+  height: 200px;
 `;
 
 function Feedback({ data }) {
@@ -55,7 +63,7 @@ function Feedback({ data }) {
 
   return (
     <StyledFeedback>
-      <div>LOGO</div>
+      <StyledLogo src={logo} />
       <h2>{currTestimony.title}</h2>
       <p>{currTestimony.text}</p>
       <p>{currTestimony.author}</p>

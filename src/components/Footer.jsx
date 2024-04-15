@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import logo from "../gallery/logo.png";
 
 const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
   font-size: var(--fs-s);
-  background-color: lightcoral;
+  background-color: var(--yellow);
+  color: var(--night);
   a {
     transition: all 0.2s;
+    color: var(--night);
     &:hover {
-      color: grey;
+      color: var(--ivory);
     }
   }
 `;
@@ -26,6 +29,21 @@ const StyledLowerFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: var(--gap-s) var(--gap-l);
+  background-color: var(--night);
+  color: var(--ivory);
+
+  a {
+    color: var(--ivory);
+
+    &:hover {
+      color: var(--yellow);
+    }
+  }
+`;
+
+const StyledLogo = styled.img`
+  width: 200px;
+  height: 200px;
 `;
 
 const InnerFooter = styled.div`
@@ -52,26 +70,30 @@ function Footer() {
       <StyledUpperFooter>
         <InnerFooter>
           <InnerFooterTitle>COORDINATES</InnerFooterTitle>
-          <div>1234 5th Terrence Street </div>
-          <div>San Diego, CA 12345</div>
+          <div>1234 3e rue </div>
+          <div>Quebec, QC, A1A 1A1</div>
           <div>123-456-7890</div>
           <div>example@email.com</div>
         </InnerFooter>
         <InnerFooter>
           <InnerFooterTitle>MORE</InnerFooterTitle>
+          <Link to="/home">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact us</Link>
           <Link to="/faq">FAQ</Link>
-          <Link to="/products">Products</Link>{" "}
+          <Link to="/products">Products</Link>
         </InnerFooter>
-        <div>LOGO</div>
+        <StyledLogo src={logo} />
       </StyledUpperFooter>
       <StyledLowerFooter>
-        <div>&copy; {`Robert's Farm`}</div>
+        <div>&copy; {`Robert's Farm — 2024`}</div>
         <IconsContainer>
-          <div>GitHub</div>
-          <div>Instagram</div>
-          <div>LinkedIn</div>
+          <a href="https://github.com/Tsi-Bo">GitHub</a>
+          <a href="https://tsi-bo.github.io/Portfolio/">Portfolio</a>
+          <a href="https://www.instagram.com/tsibo_fb/">Instagram</a>
+          <a href="https://www.linkedin.com/in/thibault-f-bedot-77a7b32a4/">
+            Linkedin
+          </a>
         </IconsContainer>
       </StyledLowerFooter>
     </StyledFooter>

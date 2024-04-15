@@ -6,24 +6,32 @@ import styled from "styled-components";
 const StyledAccordion = styled.div`
   width: 80%;
   margin: var(--gap-l) auto;
-  background-color: lightgray;
+  background-color: var(--ivory);
   min-width: var(--block-s);
+  color: var(--night);
 `;
 
 const StyledAccordionItem = styled.div`
-  background-color: lightcyan;
+  background-color: var(--yellow);
+  border-radius: 10px;
   margin: var(--gap-s) auto;
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: var(--gap-s) var(--gap-m);
+  color: var(--night);
 `;
 
 const AccordionItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--gap-m);
+  align-items: center;
+  color: var(--night);
+`;
+
+const StyledHr = styled.hr`
+  border: 1px solid var(--night);
 `;
 
 function Accordion({ data }) {
@@ -51,7 +59,12 @@ function AccordionItem({ num, title, text }) {
         <p>{isOpen ? "-" : "+"}</p>
       </AccordionItemContainer>
 
-      {isOpen && <div>{text}</div>}
+      {isOpen && (
+        <div>
+          <StyledHr />
+          {text}
+        </div>
+      )}
     </StyledAccordionItem>
   );
 }
