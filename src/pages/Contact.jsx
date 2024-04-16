@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ContainerItem from "../components/ContainerItem";
 import ContactForm from "../components/ContactForm";
 import contactImage from "../gallery/farm-contact.jpg";
 
@@ -12,30 +11,11 @@ const StyledImage = styled.img`
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 50%); */
 `;
 
-const StyledContactContainer = styled.div`
-  display: flex;
-
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  overflow: auto;
-  width: 85%;
-  background-color: var(--yellow);
-`;
-
 function Contact() {
   return (
     <StyledContact>
       <StyledImage src={contactImage} />
       <ContactForm />
-
-      {/* <StyledContactContainer>
-        <StyledImage src={contactImage} />
-        <ContainerItem>
-          <ContactForm />
-        </ContainerItem>
-      </StyledContactContainer> */}
     </StyledContact>
   );
 }
