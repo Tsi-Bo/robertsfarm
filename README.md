@@ -1,5 +1,11 @@
 # Robert's Farm
 
+## Access the site here
+
+https://tsi-bo.github.io/robertsfarm/
+
+## What is Robert's Farm project ?
+
 Welcome to our farm's website, your online gateway to the serene beauty and sustainable practices of our traditional Quebecois farm. As a fourth-generation family-run operation, we take immense pride in our commitment to organic farming, ethical animal husbandry, and fostering a deep connection to the land.
 
 Explore our About page to learn about our rich heritage, our philosophy of sustainable agriculture, and our vibrant community of like-minded individuals. Discover what sets us apart and why visitors from near and far are drawn to our farm year after year.
