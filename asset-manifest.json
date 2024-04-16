@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "./static/js/main.53829fea.js",
+    "static/media/grand-pere.jpg": "./static/media/grand-pere.29418a4e69c5300de481.jpg",
+    "static/media/recent-about.jpg": "./static/media/recent-about.709a69b6371d904f0002.jpg",
+    "static/media/cows.jpg": "./static/media/cows.b16477c1cd7c87df3988.jpg",
+    "static/media/old-about.jpg": "./static/media/old-about.ab60ce155b32b540e9bb.jpg",
+    "static/media/vegetables.jpg": "./static/media/vegetables.499e89ecd333079bed29.jpg",
+    "static/media/farm-contact.jpg": "./static/media/farm-contact.840e99f0c70634cff11d.jpg",
+    "static/media/image4-min.jpeg": "./static/media/image4-min.2b72443b80e28b44f68a.jpeg",
+    "static/media/logo.png": "./static/media/logo.25d2d3c294f09ad51c0c.png",
+    "index.html": "./index.html",
+    "main.53829fea.js.map": "./static/js/main.53829fea.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.53829fea.js"
+  ]
+}
