@@ -2,7 +2,7 @@
   "name": "robert-farm",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://tsibo.github.io/robertsfarm",
+  "homepage": "https://tsi-bo.github.io/robertsfarm/",
   "type": "module",
   "scripts": {
     "dev": "vite",
