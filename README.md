@@ -2,7 +2,8 @@
 
 ## Access the site here
 
-https://tsi-bo.github.io/robertsfarm/
+https://roberts-family-farm.netlify.app/home
+
 
 ## What is Robert's Farm project ?
 
