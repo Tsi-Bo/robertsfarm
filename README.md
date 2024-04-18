@@ -2,7 +2,7 @@
 
 ## Access the site here
 
-https://roberts-family-farm.netlify.app/home
+https://roberts-family-farm.netlify.app
 
 
 ## What is Robert's Farm project ?
